@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: student-performance-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./student_performance.db
+    healthCheckPath: /
